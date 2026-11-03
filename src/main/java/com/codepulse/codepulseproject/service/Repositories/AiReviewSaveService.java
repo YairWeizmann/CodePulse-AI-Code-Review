@@ -5,6 +5,8 @@ import com.codepulse.codepulseproject.model.PullRequestEntity;
 import com.codepulse.codepulseproject.repository.AiReviewStore;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AiReviewSaveService
 {
@@ -15,10 +17,7 @@ public class AiReviewSaveService
         this.aiReviewStore = aiReviewStore;
     }
 
-    public AiReviewEntity saveReview(
-            PullRequestEntity pullRequest,
-            String commitSha,
-            String feedback)
+    public AiReviewEntity saveReview(PullRequestEntity pullRequest, String commitSha, String feedback)
     {
         // Search for a saved review of this PR and commit.
         AiReviewEntity existing = aiReviewStore.findByPullRequestAndCommitSha(pullRequest, commitSha);
@@ -35,4 +34,12 @@ public class AiReviewSaveService
 
         return aiReviewStore.save(newReview);
     }
+
+    public List<AiReviewEntity> getAiReviewsByOwner(String owner)
+    {
+        return aiReviewStore.findAllByPullRequest_Repository_OwnerIgnoreCase(owner);
+    }
+
+
+
 }

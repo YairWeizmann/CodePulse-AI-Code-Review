@@ -1,4 +1,4 @@
-package com.codepulse.codepulseproject.service;
+package com.codepulse.codepulseproject.service.EventService;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Value;

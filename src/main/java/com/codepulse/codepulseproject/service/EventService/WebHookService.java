@@ -1,4 +1,4 @@
-package com.codepulse.codepulseproject.service;
+package com.codepulse.codepulseproject.service.EventService;
 import com.codepulse.codepulseproject.model.AiReviewEntity;
 import com.codepulse.codepulseproject.model.PullRequestEntity;
 import com.codepulse.codepulseproject.model.RepositoryEntity;

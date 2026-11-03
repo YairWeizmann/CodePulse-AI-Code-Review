@@ -1,4 +1,4 @@
-package com.codepulse.codepulseproject.service;
+package com.codepulse.codepulseproject.service.Practice;
 
 
 import org.springframework.stereotype.Service;

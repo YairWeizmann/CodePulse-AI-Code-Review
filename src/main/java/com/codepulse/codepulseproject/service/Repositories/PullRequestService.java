@@ -6,6 +6,8 @@ import com.codepulse.codepulseproject.model.RepositoryEntity;
 import com.codepulse.codepulseproject.repository.PullRequestStore;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PullRequestService
 {
@@ -34,6 +36,11 @@ public class PullRequestService
 
         // Insert the new PR into PostgreSQL.
         return pullRequestStore.save(newPr);
+    }
+
+    public List<PullRequestEntity> getPullRequestsByOwner(String owner)
+    {
+        return pullRequestStore.findAllByRepository_OwnerIgnoreCase(owner);
     }
 
 

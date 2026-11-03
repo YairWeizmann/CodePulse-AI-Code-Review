@@ -3,6 +3,8 @@ import com.codepulse.codepulseproject.model.RepositoryEntity;
 import com.codepulse.codepulseproject.repository.RepositoryStore;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class RepositoryService
@@ -31,4 +33,10 @@ public class RepositoryService
         return repositoryStore.save(newRepo);
     }
 
+
+    // Loads the saved repositories belonging to the given owner.
+    public List<RepositoryEntity> getRepositoriesByOwner(String owner)
+    {
+        return repositoryStore.findAllByOwnerIgnoreCase(owner);
+    }
 }

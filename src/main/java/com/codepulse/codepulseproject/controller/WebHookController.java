@@ -1,5 +1,5 @@
 package com.codepulse.codepulseproject.controller;// Lets us work with JSON as a tree.
-import com.codepulse.codepulseproject.service.WebHookService;
+import com.codepulse.codepulseproject.service.EventService.WebHookService;
 import org.springframework.web.bind.annotation.RequestMapping; // Uses the @RequestMapping annotation
 import tools.jackson.databind.JsonNode;// Converts JSON text into JsonNode objects.
 import tools.jackson.databind.ObjectMapper; // Lets us create POST endpoints.
