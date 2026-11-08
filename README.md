@@ -47,14 +47,15 @@ The backend uses Spring Boot to handle GitHub events, communicate with external 
 
 ## Screenshots
 
-### Dashboard
-![CodePulse Dashboard](CodePulseDashboard.jpeg)
+### Landing Page
+![CodePulse Landing Page](CodePulse%20AI%20Code%20Review%20Landing%20Page.png)
 
-### AI Code Review
-![CodePulse AI Review](CodePulseReview.jpeg)
+### Repository Dashboard
+![CodePulse Dashboard](CodePulseHome.jpeg)
 
-### Review History
-![CodePulse Review History](CodePulseHistory.jpeg)
+### AI-Powered Pull Request Review
+![CodePulse Pull Request Review](pullrequestsScreenshot.jpeg)
+
 
 ## Development Status
 
