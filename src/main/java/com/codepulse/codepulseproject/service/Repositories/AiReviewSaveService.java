@@ -35,10 +35,18 @@ public class AiReviewSaveService
         return aiReviewStore.save(newReview);
     }
 
+    //Returns all the ai reviews the owner has
     public List<AiReviewEntity> getAiReviewsByOwner(String owner)
     {
         return aiReviewStore.findAllByPullRequest_Repository_OwnerIgnoreCase(owner);
     }
+
+    //Returns all the ai reviews for specific Pull Request
+    public List<AiReviewEntity> getAiReviewsByPullRequest(long id , String owner)
+    {
+        return aiReviewStore.findAllByPullRequest_IdAndPullRequest_Repository_OwnerIgnoreCase(id,owner);
+    }
+
 
 
 

@@ -12,4 +12,8 @@ public interface AiReviewStore extends JpaRepository<AiReviewEntity, Long>
 
     // Finds reviews whose PR's repository belongs to this owner (Implementation in Spring Data).
     List<AiReviewEntity> findAllByPullRequest_Repository_OwnerIgnoreCase(String owner);
+
+
+    // Finds reviews for one specific PR, provided its repository belongs to this owner.
+    List<AiReviewEntity> findAllByPullRequest_IdAndPullRequest_Repository_OwnerIgnoreCase(Long pullRequestId, String owner);
 }

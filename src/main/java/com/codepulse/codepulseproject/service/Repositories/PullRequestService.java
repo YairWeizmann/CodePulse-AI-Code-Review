@@ -38,10 +38,17 @@ public class PullRequestService
         return pullRequestStore.save(newPr);
     }
 
+
+    // Loads PRs across all repositories belonging to this owner.
     public List<PullRequestEntity> getPullRequestsByOwner(String owner)
     {
         return pullRequestStore.findAllByRepository_OwnerIgnoreCase(owner);
     }
 
 
+    // Loads PRs from the selected repository belonging to this owner.
+    public List<PullRequestEntity> getPullRequestsByRepository(Long repositoryId, String owner)
+    {
+        return pullRequestStore.findAllByRepository_IdAndRepository_OwnerIgnoreCase(repositoryId, owner);
+    }
 }
